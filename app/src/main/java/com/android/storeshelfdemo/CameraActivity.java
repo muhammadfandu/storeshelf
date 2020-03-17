@@ -201,8 +201,8 @@ public class CameraActivity extends AppCompatActivity {
             }
         }
         else if(pictureId == 5){
-            File myFile3 = new File(picture3Path);
-            if(myFile3.exists()){
+            File myFile2 = new File(picture2Path);
+            if(myFile2.exists()){
                 Bitmap imgTop = downScaleImage(picture3Path);
                 Bitmap imgTopRot = rotate(imgTop, 90);
                 Bitmap imgTopRotTranslate = Bitmap.createBitmap(imgTopRot.getWidth() + 600,imgTopRot.getHeight(), imgTopRot.getConfig());
