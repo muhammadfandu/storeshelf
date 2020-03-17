@@ -268,12 +268,12 @@ public class CameraActivity extends AppCompatActivity {
             if(myFile5.exists()){
                 Bitmap imgRight = downScaleImage(picture5Path);
                 Bitmap imgRightRot = rotate(imgRight, 90);
-                Bitmap imgRightRotTranslate = Bitmap.createBitmap(imgRightRot.getWidth(),imgRightRot.getHeight() + 800, imgRightRot.getConfig());
+                Bitmap imgRightRotTranslate = Bitmap.createBitmap(imgRightRot.getWidth(),imgRightRot.getHeight() - 800, imgRightRot.getConfig());
 
                 Canvas translateCanvas = new Canvas(imgRightRotTranslate);
                 Matrix translateMatrix = new Matrix();
                 // Set x y translate value..
-                translateMatrix.setTranslate(0, 800);
+                translateMatrix.setTranslate(0, -800);
                 Paint paint = new Paint();
                 translateCanvas.drawBitmap(imgRightRot, translateMatrix, paint);
 
